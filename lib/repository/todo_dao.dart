@@ -3,6 +3,7 @@ import 'app_database.dart';
 import 'tables.dart';
 part 'todo_dao.g.dart';
 
+// DAO(Data Access Object)
 @DriftAccessor(tables: [Todos])
 class TodoDao extends DatabaseAccessor<AppDatabase> with _$TodoDaoMixin {
   TodoDao(super.db);

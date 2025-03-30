@@ -5,6 +5,7 @@ import 'todo_dao.dart';
 
 part 'app_provider.g.dart';
 
+// データベース召喚
 @riverpod
 AppDatabase appDatabase(Ref ref) {
   final database = AppDatabase();
@@ -12,12 +13,14 @@ AppDatabase appDatabase(Ref ref) {
   return database;
 }
 
+// DAO召喚
 @riverpod
 TodoDao todoDao(Ref ref) {
   final database = ref.watch(appDatabaseProvider);
   return database.todoDao;
 }
 
+// データ取得(購読)
 @riverpod
 Stream<List<Todo>> todos(Ref ref) {
   final todoDao = ref.watch(todoDaoProvider);

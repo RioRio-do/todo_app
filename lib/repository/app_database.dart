@@ -9,6 +9,7 @@ import 'todo_dao.dart';
 
 part 'app_database.g.dart';
 
+// データベース本体
 @DriftDatabase(tables: [Todos], daos: [TodoDao])
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());

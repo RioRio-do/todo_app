@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_app/usecases/delete_todo.dart';
 import '../../repository/app_database.dart';
 
+// Todoアイテム
 class TodoItem extends ConsumerWidget {
   final Todo todo;
   const TodoItem({required this.todo, super.key});
